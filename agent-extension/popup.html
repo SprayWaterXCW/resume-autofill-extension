@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume Agent</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="mark">RA</div>
+      <div>
+        <h1>Resume Agent</h1>
+        <p>当前标签页入口</p>
+      </div>
+    </header>
+
+    <section class="card" aria-labelledby="tab-heading">
+      <div class="section-heading">
+        <h2 id="tab-heading">已选页面</h2>
+        <span id="scope" class="badge">正在识别</span>
+      </div>
+      <strong id="tab-title">正在读取当前标签页…</strong>
+      <p id="tab-url" class="url"></p>
+      <p id="selection-note" class="muted"></p>
+    </section>
+
+    <section class="card" aria-labelledby="profile-heading">
+      <div class="section-heading"><h2 id="profile-heading">填写资料</h2><span id="profile-state" class="badge">未配置</span></div>
+      <p id="profile-summary" class="muted">打开编辑页面，填写并保存你的简历资料。</p>
+      <button id="profile-edit" type="button">编辑资料 · 打开网页</button>
+      <button id="profile-import" type="button" class="secondary">导入已有资料备份</button>
+      <input id="profile-file" type="file" accept=".json,application/json" hidden>
+      <p id="profile-note" class="muted">资料保存在这个扩展本地；模型只收到字段标签和资料路径。</p>
+      <label><input id="month-start-day" type="checkbox">经历日期缺少“日”时，按当月 1 日填写</label>
+      <p id="date-policy-note" class="muted">启用后在记录中标明这是你确认的日期补全规则；资料原文保持不变。</p>
+    </section>
+    <section class="card" aria-labelledby="fill-mode-heading">
+      <h2 id="fill-mode-heading">填写模式</h2>
+      <label for="fill-mode">处理已有内容</label>
+      <select id="fill-mode"><option value="overwrite" selected>全部覆盖（默认）</option><option value="empty">只填空白</option></select>
+      <p id="fill-mode-note" class="muted">用资料库覆盖可编辑字段；缺少资料不清空。每个任务使用启动时的模式。</p>
+    </section>
+    <button id="run" type="button" disabled>开始填写此标签页</button>
+    <button id="stop" type="button" class="secondary" hidden>停止填写此标签页</button>
+    <p id="background-note" class="muted">切换标签页后继续填写原页面；每个标签页单独开始、查看记录和停止。</p>
+    <p class="boundary">Agent 按所选模式填写，不操作声明、签名、保存、提交或投递按钮。你可以直接在网页上手动操作。</p>
+    <button id="scan" type="button" class="secondary" disabled>扫描当前网页</button>
+    <p id="scan-note" class="muted">扫描字段与按钮结构，生成页面诊断。</p>
+    <button id="plan" type="button" class="secondary" disabled>仅生成填写计划</button>
+    <p id="plan-note" class="muted">导入后使用你的资料目录；未导入时使用虚构教育经历演示。</p>
+    <section id="plan-card" class="card" aria-labelledby="plan-heading" hidden>
+      <div class="section-heading">
+        <h2 id="plan-heading">填写计划</h2>
+        <span id="plan-state" class="badge">等待</span>
+      </div>
+      <ol id="plan-events"></ol>
+      <p id="plan-summary" class="muted"></p>
+      <div id="plan-groups"></div>
+      <p id="plan-boundary" class="muted"></p>
+    </section>
+    <section id="scan-card" class="card" aria-labelledby="scan-heading" hidden>
+      <div class="section-heading">
+        <h2 id="scan-heading">页面诊断</h2>
+        <span class="badge ready">只读扫描</span>
+      </div>
+      <p id="scan-summary" class="muted"></p>
+      <p id="scan-types" class="muted"></p>
+      <div id="scan-groups"></div>
+      <ul id="scan-warnings"></ul>
+      <details id="custom-choice-diagnostic" hidden><summary>未识别选项结构诊断</summary><ul id="custom-choice-structure"></ul></details>
+      <details id="add-diagnostic" hidden><summary>添加控件结构诊断</summary><ul id="add-structure"></ul></details>
+      <details id="calendar-diagnostic" hidden><summary>当前日历导航诊断</summary><ul id="calendar-structure"></ul></details>
+    </section>
+
+    <section class="card" aria-labelledby="run-heading">
+      <div class="section-heading">
+        <h2 id="run-heading">执行状态</h2>
+        <span id="run-state" class="badge">等待</span>
+      </div>
+      <p id="run-note" class="muted">启动器运行后，这里会显示 Agent 进度。</p>
+      <dl id="metrics" hidden>
+        <div><dt>Agent 添加经历</dt><dd id="added">0</dd></div>
+        <div><dt>Agent 写入字段</dt><dd id="written">0</dd></div>
+        <div><dt id="node-label">模型请求次数</dt><dd id="node-runs">0</dd></div>
+      </dl>
+    </section>
+    <section id="event-card" class="card" aria-labelledby="event-heading" hidden>
+      <div class="section-heading"><h2 id="event-heading">执行记录</h2><button id="copy-log" type="button" class="small secondary">复制本次记录</button></div>
+      <p id="copy-note" class="muted"></p>
+      <label><input id="show-all-events" type="checkbox">显示全部执行记录</label>
+      <ol id="events"></ol>
+      <details id="outcome-details"><summary>逐项控件结果与阶段诊断</summary><ul id="outcome-list"></ul></details>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

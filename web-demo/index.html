@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>北辰科技 · 招聘申请演示</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="返回演示首页">
+      <span class="brand-mark">北</span>
+      <span><strong>北辰科技</strong><small>人才招聘中心 · 本地演示</small></span>
+    </a>
+    <span class="environment-pill"><span class="pulse-dot"></span> LOCAL DEMO</span>
+  </header>
+
+  <div class="page-shell">
+    <section class="hero">
+      <div class="eyebrow">2026 校园招聘 · 自制测试页面</div>
+      <h1>产品研发工程师 <span>申请表</span></h1>
+      <p>观察 Agent 如何根据虚构资料补足经历卡片、填写字段，并逐步检查结果。此页面没有投递接口。</p>
+      <div class="hero-tags"><span>多段教育经历</span><span>同义字段名称</span><span>填写后回读</span><span>禁止提交</span></div>
+    </section>
+
+    <div class="workspace-grid">
+      <main class="application-card" aria-label="模拟招聘申请表">
+        <div class="card-topline"><span>APPLICATION FORM</span><span>01 / 01</span></div>
+        <div class="form-heading">
+          <div>
+            <p class="section-kicker">候选人信息</p>
+            <h2>完善申请资料</h2>
+            <p class="muted">本页仅演示教育经历模块。资料中的学校名称均为虚构。</p>
+          </div>
+          <span class="draft-badge">待填写</span>
+        </div>
+
+        <div class="candidate-summary">
+          <div class="avatar">示</div>
+          <div><strong>示例候选人</strong><span>目标岗位 · 产品研发工程师</span></div>
+          <span class="summary-note">虚构资料</span>
+        </div>
+
+        <section class="form-section" aria-labelledby="education-title">
+          <div class="section-heading">
+            <div><p class="section-kicker">02 / EDUCATION</p><h3 id="education-title">教育经历</h3></div>
+            <span id="entry-count" class="count-chip">1 段经历</span>
+          </div>
+          <p class="section-description">资料库有两段教育经历，页面一开始只有一张卡片。观察 Agent 是否主动补足。</p>
+          <div id="education-entries" class="entry-stack"></div>
+          <button id="add-education" class="add-entry-button" type="button"><span aria-hidden="true">＋</span> 添加教育经历</button>
+        </section>
+
+        <div class="form-footer">
+          <div class="footer-icon" aria-hidden="true">⌁</div>
+          <p><strong>提交功能已移除</strong><br><span>演示页只展示填写过程。Agent 没有提交或投递工具。</span></p>
+          <button class="submit-disabled" type="button" disabled>提交申请</button>
+        </div>
+      </main>
+
+      <aside class="agent-card" aria-label="Agent 控制台">
+        <div class="agent-heading"><span class="agent-logo" aria-hidden="true">✳</span><div><p class="section-kicker">LIVE AGENT</p><h2>填写控制台</h2></div></div>
+        <div id="status-box" class="status-box idle" role="status" aria-live="polite">
+          <div class="status-orb"></div>
+          <div><strong id="status-title">等待开始</strong><p id="status-detail">选择一种模式，观看左侧表单逐步变化。</p></div>
+        </div>
+        <div class="mode-help">
+          <strong>两种模式使用同一套执行与验证内核</strong>
+          <p>快速演示由脚本决定下一步；真实模型模式由你配置的 LLM 决定下一步。</p>
+        </div>
+        <div class="action-buttons">
+          <button id="run-script" class="primary-action" type="button"><span>▶</span> 快速演示 <small>无需 API</small></button>
+          <button id="run-model" class="secondary-action" type="button"><span>✦</span> 真实模型填写</button>
+          <button id="reset-page" class="text-action" type="button">重置表单</button>
+        </div>
+        <p id="model-note" class="model-note">正在检查本地模型配置…</p>
+
+        <div class="task-overview">
+          <span>本次目标</span>
+          <strong>补足并填写 2 段教育经历</strong>
+          <small id="remaining-summary">剩余 4 项待核对</small>
+        </div>
+
+        <div class="progress-heading"><span>任务进度</span><strong id="progress-text">0 / 4 字段</strong></div>
+        <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+        <div class="metrics"><div><span id="metric-cards">1</span><small>经历卡片</small></div><div><span id="metric-fields">0</span><small>已填字段</small></div><div><span id="metric-steps">0</span><small>Agent 步骤</small></div></div>
+
+        <div class="timeline-heading"><h3>执行记录</h3><span>点击步骤可展开</span></div>
+        <p class="timeline-note">决策摘要来自模型或演示脚本；观察、执行和核验由程序记录。</p>
+        <ol id="activity-list" class="activity-list" aria-live="polite"><li class="activity-empty">点击上方按钮后，这里会逐步显示 Agent 的观察、判断、执行与核验。</li></ol>
+      </aside>
+    </div>
+    <p class="page-note">本地演示环境 · 所有简历值均为虚构 · 此页面不会向招聘网站发送任何请求</p>
+  </div>
+
+  <template id="education-card-template">
+    <article class="education-entry">
+      <div class="entry-header"><span class="entry-number"></span><span class="entry-state">等待填写</span></div>
+      <div class="field-grid">
+        <div class="field"><label data-label-key="school">毕业学校</label><input data-key="school" type="text" autocomplete="off" placeholder="请输入学校名称"></div>
+        <div class="field"><label data-label-key="major">所学专业</label><input data-key="major" type="text" autocomplete="off" placeholder="请输入专业名称"></div>
+      </div>
+    </article>
+  </template>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "resume-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A verifiable, no-submit resume form agent under active development",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "bench": "node src/bench/run.js",
+    "demo": "node src/demo/run.js",
+    "demo:web": "node web-demo/server.js",
+    "demo:service:start": "node scripts/demo-service.js start",
+    "demo:service:stop": "node scripts/demo-service.js stop",
+    "demo:service:status": "node scripts/demo-service.js status",
+    "build:extension": "node scripts/build-extension.js",
+    "eval:model": "node src/model-eval/run.js",
+    "eval:plan": "node src/model-eval/plan.js",
+    "eval:plan:large": "node src/model-eval/large-form-plan.js",
+    "eval:plan:layouts": "node src/model-eval/generic-form.js",
+    "eval:awards": "node src/model-eval/award-levels.js",
+    "eval:benchmark": "node src/evaluation/run.js",
+    "test": "node --test tests/*.test.js",
+    "check": "npm test"
+  },
+  "dependencies": {
+    "ws": "8.22.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "jsdom": "26.1.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

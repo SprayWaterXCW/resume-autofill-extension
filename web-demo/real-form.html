@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>真实填写执行器 · 虚构验收表单</title><link rel="stylesheet" href="/real-form.css"></head>
+<body><main>
+  <header><h1>真实填写执行器 · 虚构验收表单</h1><p>这个页面使用普通表单控件和同一套真实网页执行器；数据全部虚构。</p>
+    <a href="/fixtures/example-profile.json" download="agent-fictional-profile.json">下载虚构资料 JSON</a>
+    <p id="verification">已填写 0 项 · 教育 1 组 · 获奖 1 组 · 提交动作 0 次</p>
+  </header>
+  <section data-agent-group><h2>基本信息</h2><form>
+    <div class="el-form-item"><label>姓名</label><input id="existing-name" value="用户原有虚构姓名"></div>
+    <div class="el-form-item"><label>手机号码</label><input type="tel" maxlength="11"></div>
+    <div class="el-form-item"><label>邮箱</label><input type="email"></div>
+    <div class="el-form-item"><label>身高（cm）</label><input type="number" min="100" max="250"></div>
+    <div class="el-form-item"><label>籍贯</label><input></div>
+    <div class="el-form-item"><label>性别</label><label><input type="radio" name="gender">男</label><label><input type="radio" name="gender">女</label></div>
+  </form></section>
+  <section data-agent-group id="education"><h2>教育经历</h2>
+    <article data-agent-entry><form>
+      <div class="el-form-item"><label>毕业学校</label><input></div>
+      <div class="el-form-item"><label>所学专业</label><input></div>
+      <div class="el-form-item"><label>学历</label><select><option value="">请选择</option><option>本科</option><option>硕士</option><option>博士</option></select></div>
+      <div class="el-form-item"><label>开始时间</label><div class="el-date-editor"><input readonly placeholder="复杂日期暂待手工处理"></div></div>
+      <div class="el-form-item"><label>毕业时间</label><input type="date"></div>
+    </form></article>
+    <button type="button" data-add>添加教育经历</button>
+  </section>
+  <section data-agent-group id="language"><h2>语言能力</h2><form data-agent-entry>
+    <div class="el-form-item"><label>语言</label><input></div>
+    <div class="el-form-item"><label>掌握程度</label><div class="el-select"><input id="proficiency" readonly role="combobox" aria-controls="proficiency-options" aria-expanded="false"></div></div>
+  </form><ul id="proficiency-options" role="listbox" hidden><li role="option">一般</li><li role="option">良好</li><li role="option">熟练</li><li role="option">精通</li></ul></section>
+  <section data-agent-group id="awards"><h2>获奖经历</h2><article data-agent-entry><form>
+    <div class="el-form-item"><label>奖项名称</label><input></div>
+  </form></article><button type="button" data-add>添加获奖经历</button></section>
+  <section data-agent-group><h2>其他信息</h2><form>
+    <div class="el-form-item"><label>了解到公司的渠道</label><select><option value="">请选择</option><option>校园就业网站</option><option>社交媒体</option></select></div>
+  </form></section>
+  <section data-agent-group><h2>有关声明</h2><form id="declaration">
+    <label><input type="checkbox">同意相关声明</label><canvas width="100" height="40" aria-label="签名"></canvas>
+    <button type="submit">提交简历</button><button type="button" id="deceptive">添加并提交</button>
+  </form></section>
+</main><script src="/real-form.js"></script></body></html>

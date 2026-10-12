@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-05T13:19:53.616Z",
+  "model": "deepseek-flash",
+  "scope": "Synthetic award mapping requests only; model receives labels/paths, no profile values or browser actions",
+  "passed": 2,
+  "total": 3,
+  "cases": [
+    {
+      "id": "award-only-merged-levels",
+      "passed": true,
+      "paths": [
+        "awards.0.name",
+        "awards.0.scope",
+        "awards.0.rank",
+        "awards.0.description",
+        "competitions.0.name",
+        "competitions.0.scope",
+        "competitions.0.rank",
+        "competitions.0.description"
+      ],
+      "routes": [
+        [
+          "awards",
+          "competitions"
+        ]
+      ],
+      "fieldStatuses": [
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter",
+        "mapped",
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter",
+        "mapped"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 3431,
+        "outputTokens": 308,
+        "totalLatencyMs": 1400,
+        "parallelCallsDiscarded": 0
+      }
+    },
+    {
+      "id": "separate-award-competition-levels",
+      "passed": false,
+      "code": "PLAN_SEMANTIC_MISMATCH",
+      "proposedPaths": [
+        "awards.0.name",
+        "awards.0.level",
+        "awards.0.rank",
+        "awards.0.description",
+        "competitions.0.name",
+        "competitions.0.level",
+        "competitions.0.rank",
+        "competitions.0.description"
+      ],
+      "diagnostic": {
+        "violation": "incompatible_semantics",
+        "fieldIds": [
+          "field-1"
+        ],
+        "sourcePaths": [
+          "awards.0.level"
+        ]
+      },
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 3457,
+        "outputTokens": 323,
+        "totalLatencyMs": 1499,
+        "parallelCallsDiscarded": 0
+      }
+    },
+    {
+      "id": "generic-dropdown-with-unconfirmed-scope",
+      "passed": true,
+      "paths": [
+        "awards.0.name",
+        "awards.0.level",
+        null
+      ],
+      "routes": [
+        [
+          "awards"
+        ]
+      ],
+      "fieldStatuses": [
+        "mapped",
+        "needs_control_adapter",
+        "missing_profile"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 2294,
+        "outputTokens": 202,
+        "totalLatencyMs": 1244,
+        "parallelCallsDiscarded": 0
+      }
+    }
+  ]
+}

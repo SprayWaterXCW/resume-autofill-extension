@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-06",
+  "codeRelease": "0.7.28",
+  "installedRelease": "0.7.28",
+  "submissionPolicy": "agent_actions_only",
+  "realAcceptance": "Normal Chrome, existing profile/model, refresh then Start only. One authorized preview attempt in the intermediate release; final release manually saved as draft and refreshed. No final submission.",
+  "privacy": "No profile values, private URLs, screenshots, page state objects or API keys.",
+  "tests": { "tests": 211, "pass": 211, "fail": 0, "skipped": 0, "cancelled": 0 },
+  "buildPassed": true,
+  "runs": [
+    { "phase": "baseline", "runId": "f60dad60-c2fd-4d98-a3cf-368acd814da9", "written": 84, "addedCards": 15, "unresolved": 9, "blankFields": 30, "domReadbackDoesNotProveFormAcceptance": true, "requiredMessagesObserved": 12, "requiredMessagesWithVisibleValue": 11 },
+    { "phase": "intermediate_failed_website_validation", "version": "0.7.27", "runId": "18791b0e-015d-412a-9171-342aad4f2e69", "written": 84, "addedCards": 15, "unresolved": 10, "blankFields": 31, "inputStateVerified": 43, "requiredMessagesObserved": 23, "requiredMessagesWithVisibleValue": 12, "websiteValidationPassed": false },
+    { "phase": "final_saved_draft_refresh", "version": "0.7.28", "runId": "25ce58ea-2706-43b9-bc75-7583c1645e50", "startedAt": "2026-10-06T15:32:06.776Z", "endedAt": "2026-10-06T15:35:17.436Z", "terminalCode": "PARTIAL_FILL_VERIFIED", "written": 85, "addedCards": 15, "unresolved": 9, "blankFields": 31, "unplanned": 26, "expected": 102, "modelCalls": 25, "inputStateVerified": 44, "controlReadbackOnly": 41, "syntheticBlurCount": 44, "laterAuditFailures": 0 }
+  ],
+  "draftReload": {
+    "performedBy": "maintainer_native_computer_ui",
+    "comparison": "Visible AX values; campus records compared as full visible tuples after website reordering.",
+    "sections": [
+      { "key": "personal", "beforeNonempty": 17, "afterNonempty": 17, "unchanged": 17 },
+      { "key": "educations", "beforeNonempty": 16, "afterNonempty": 16, "unchanged": 16 },
+      { "key": "internships", "beforeNonempty": 8, "afterNonempty": 8, "unchangedRecords": 2, "unchangedDescriptions": 2 },
+      { "key": "awards", "beforeNonempty": 20, "afterNonempty": 20, "unchanged": 20 },
+      { "key": "campusExperiences", "beforeNonempty": 12, "afterNonempty": 12, "unchangedRecords": 3, "unchangedDescriptions": 3, "orderChanged": true },
+      { "key": "papers", "beforeNonempty": 9, "afterNonempty": 9, "unchanged": 9 }
+    ],
+    "allAgentReceiptsIndependentlySaved": false,
+    "finalConfirmationReached": false,
+    "finalApplicationSubmitted": false
+  },
+  "remainingCodes": ["REGION_PATH_MISMATCH", "OPTION_UNAVAILABLE", "DATE_FORMAT_UNSUPPORTED"],
+  "fillMode": { "default": "overwrite", "choices": ["overwrite", "empty"], "storedLocally": true, "frozenPerJob": true, "realAcceptanceMode": "overwrite" }
+}

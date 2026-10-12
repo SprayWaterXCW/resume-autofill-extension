@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-05T10:27:10.125Z",
+  "model": "deepseek-flash",
+  "scope": "Synthetic award mapping requests only; model receives labels/paths, no profile values or browser actions",
+  "passed": 3,
+  "total": 3,
+  "cases": [
+    {
+      "id": "award-only-merged-levels",
+      "passed": true,
+      "paths": [
+        "awards.0.name",
+        "awards.0.scope",
+        "awards.0.rank",
+        "competitions.0.name",
+        "competitions.0.scope",
+        "competitions.0.rank"
+      ],
+      "routes": [
+        [
+          "awards",
+          "competitions"
+        ]
+      ],
+      "fieldStatuses": [
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter",
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 3149,
+        "outputTokens": 273,
+        "totalLatencyMs": 1220,
+        "parallelCallsDiscarded": 0
+      }
+    },
+    {
+      "id": "separate-award-competition-levels",
+      "passed": true,
+      "paths": [
+        "awards.0.name",
+        "awards.0.scope",
+        "awards.0.rank",
+        "competitions.0.name",
+        "competitions.0.scope",
+        "competitions.0.rank"
+      ],
+      "routes": [
+        [
+          "awards"
+        ],
+        [
+          "competitions"
+        ]
+      ],
+      "fieldStatuses": [
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter",
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 3173,
+        "outputTokens": 289,
+        "totalLatencyMs": 1178,
+        "parallelCallsDiscarded": 0
+      }
+    },
+    {
+      "id": "generic-dropdown-with-unconfirmed-scope",
+      "passed": true,
+      "paths": [
+        "awards.0.name",
+        "awards.0.level",
+        null
+      ],
+      "routes": [
+        [
+          "awards"
+        ]
+      ],
+      "fieldStatuses": [
+        "mapped",
+        "needs_control_adapter",
+        "missing_profile"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 2328,
+        "outputTokens": 203,
+        "totalLatencyMs": 986,
+        "parallelCallsDiscarded": 0
+      }
+    }
+  ]
+}

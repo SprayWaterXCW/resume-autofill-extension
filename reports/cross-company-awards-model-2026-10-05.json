@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-05T14:07:41.746Z",
+  "model": "deepseek-flash",
+  "scope": "Synthetic award mapping requests only; model receives labels/paths, no profile values or browser actions",
+  "passed": 6,
+  "total": 6,
+  "cases": [
+    {
+      "id": "award-only-merged-levels",
+      "passed": true,
+      "paths": [
+        "awards.0.name",
+        "awards.0.scope",
+        "awards.0.rank",
+        "awards.0.description",
+        "competitions.0.name",
+        "competitions.0.scope",
+        "competitions.0.rank",
+        "competitions.0.description"
+      ],
+      "roles": [
+        "name",
+        "scope",
+        "rank",
+        "description",
+        "name",
+        "scope",
+        "rank",
+        "description"
+      ],
+      "routes": [
+        [
+          "awards",
+          "competitions"
+        ]
+      ],
+      "fieldStatuses": [
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter",
+        "mapped",
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter",
+        "mapped"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 4841,
+        "outputTokens": 374,
+        "totalLatencyMs": 2288,
+        "parallelCallsDiscarded": 0
+      }
+    },
+    {
+      "id": "separate-award-competition-levels",
+      "passed": true,
+      "paths": [
+        "awards.0.name",
+        "awards.0.scope",
+        "awards.0.rank",
+        "awards.0.description",
+        "competitions.0.name",
+        "competitions.0.scope",
+        "competitions.0.rank",
+        "competitions.0.description"
+      ],
+      "roles": [
+        "name",
+        "scope",
+        "rank",
+        "description",
+        "name",
+        "scope",
+        "rank",
+        "description"
+      ],
+      "routes": [
+        [
+          "awards"
+        ],
+        [
+          "competitions"
+        ]
+      ],
+      "fieldStatuses": [
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter",
+        "mapped",
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter",
+        "mapped"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 4872,
+        "outputTokens": 389,
+        "totalLatencyMs": 1519,
+        "parallelCallsDiscarded": 0
+      }
+    },
+    {
+      "id": "generic-dropdown-with-unconfirmed-scope",
+      "passed": true,
+      "paths": [
+        "awards.0.name",
+        "awards.0.level",
+        null
+      ],
+      "roles": [
+        "name",
+        "level",
+        null
+      ],
+      "routes": [
+        [
+          "awards"
+        ]
+      ],
+      "fieldStatuses": [
+        "mapped",
+        "needs_control_adapter",
+        "missing_profile"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 3074,
+        "outputTokens": 224,
+        "totalLatencyMs": 986,
+        "parallelCallsDiscarded": 0
+      }
+    },
+    {
+      "id": "novel-group-and-field-wording",
+      "passed": true,
+      "paths": [
+        "awards.0.name",
+        "awards.0.scope",
+        "awards.0.rank",
+        "awards.0.description",
+        "competitions.0.name",
+        "competitions.0.scope",
+        "competitions.0.rank",
+        "competitions.0.description"
+      ],
+      "roles": [
+        "name",
+        "scope",
+        "rank",
+        "description",
+        "name",
+        "scope",
+        "rank",
+        "description"
+      ],
+      "routes": [
+        [
+          "awards"
+        ],
+        [
+          "competitions"
+        ]
+      ],
+      "fieldStatuses": [
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter",
+        "mapped",
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter",
+        "mapped"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 6246,
+        "outputTokens": 392,
+        "totalLatencyMs": 1446,
+        "parallelCallsDiscarded": 0
+      }
+    },
+    {
+      "id": "single-prose-box-with-all-awards-and-competitions",
+      "passed": true,
+      "paths": [
+        "formAnswers.awardsAndCompetitionsSummary"
+      ],
+      "roles": [
+        "summary"
+      ],
+      "routes": [
+        [
+          "awards",
+          "competitions",
+          "formAnswers"
+        ]
+      ],
+      "fieldStatuses": [
+        "mapped"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 3389,
+        "outputTokens": 183,
+        "totalLatencyMs": 1001,
+        "parallelCallsDiscarded": 0
+      }
+    },
+    {
+      "id": "separate-prose-boxes",
+      "passed": true,
+      "paths": [
+        "formAnswers.awardsSummary",
+        "formAnswers.competitionsSummary"
+      ],
+      "roles": [
+        "summary",
+        "summary"
+      ],
+      "routes": [
+        [
+          "awards",
+          "formAnswers"
+        ],
+        [
+          "competitions",
+          "formAnswers"
+        ]
+      ],
+      "fieldStatuses": [
+        "mapped",
+        "mapped"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 3621,
+        "outputTokens": 217,
+        "totalLatencyMs": 1109,
+        "parallelCallsDiscarded": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,490 @@
+{
+  "date": "2026-10-06",
+  "codeRelease": "0.7.26",
+  "installedRelease": "0.7.25",
+  "submissionPolicy": "agent_actions_only",
+  "realAcceptance": "Normal Chrome, existing configuration, refresh then Start only; independent monthly salary edited at user request.",
+  "privacy": "No profile values, page values, screenshots, API keys, private URLs or model response contents.",
+  "tests": {
+    "tests": 204,
+    "pass": 204,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "runs": [
+    {
+      "version": "0.7.18",
+      "site": "Moka",
+      "runId": "4443a297-85e5-4ce0-9947-65f7b0010d18",
+      "scenario": "baseline",
+      "startedAt": "2026-10-06T10:35:02.603Z",
+      "endedAt": "2026-10-06T10:36:52.433Z",
+      "terminalCode": "PARTIAL_FILL_VERIFIED",
+      "finalResultReported": true,
+      "counts": {
+        "written": 64,
+        "unresolved": 2,
+        "skipped": 102,
+        "expected": 69,
+        "unplanned": 32,
+        "blankFields": 31,
+        "repaired": 0,
+        "semanticReview": 0,
+        "pending": 0,
+        "recoveries": 1
+      },
+      "progress": {
+        "agentAddedCards": 12,
+        "agentWrittenFields": 64,
+        "step": 365,
+        "modelCalls": 14
+      },
+      "verificationCodes": {
+        "VERIFIED": 77,
+        "PROTECTED": 3,
+        "OPTION_UNAVAILABLE": 1,
+        "WRITE_TARGET_RETIRED": 1
+      }
+    },
+    {
+      "version": "0.7.18",
+      "site": "BOE",
+      "runId": "2fa364df-2b2a-4748-bb52-8d1d6c57e944",
+      "scenario": "baseline",
+      "startedAt": "2026-10-06T10:35:07.638Z",
+      "endedAt": "2026-10-06T10:40:30.161Z",
+      "terminalCode": "PARTIAL_FILL_VERIFIED",
+      "finalResultReported": true,
+      "counts": {
+        "written": 53,
+        "unresolved": 38,
+        "skipped": 72,
+        "expected": 200,
+        "unplanned": 22,
+        "blankFields": 36,
+        "repaired": 0,
+        "semanticReview": 0,
+        "pending": 3,
+        "recoveries": 0
+      },
+      "progress": {
+        "agentAddedCards": 10,
+        "agentWrittenFields": 53,
+        "step": 749,
+        "modelCalls": 20
+      },
+      "verificationCodes": {
+        "PLAN_DUPLICATE_REFERENCE": 12,
+        "PLAN_UNKNOWN_REFERENCE": 1,
+        "VERIFIED": 70,
+        "PICKER_SELECTION_NOT_OBSERVED": 11,
+        "PROTECTED": 1,
+        "PICKER_NOT_COMMITTED": 11,
+        "OPTION_UNAVAILABLE": 35,
+        "DATE_FORMAT_UNSUPPORTED": 6,
+        "AWARD_OPTION_UNAVAILABLE": 41,
+        "AWARD_LEVEL_AMBIGUOUS": 7,
+        "READBACK_MISMATCH": 7,
+        "LATER_READBACK_MISMATCH": 7,
+        "AWARD_LEVEL_UNOBSERVED": 21
+      }
+    },
+    {
+      "version": "0.7.19",
+      "site": "BOE",
+      "runId": "8c1f61eb-9373-4c5e-9619-70d3ba3f9992",
+      "scenario": "intermediate",
+      "startedAt": "2026-10-06T11:03:19.943Z",
+      "endedAt": "2026-10-06T11:06:53.942Z",
+      "terminalCode": "PARTIAL_FILL_VERIFIED",
+      "finalResultReported": true,
+      "counts": {
+        "written": 79,
+        "unresolved": 5,
+        "skipped": 30,
+        "expected": 90,
+        "unplanned": 25,
+        "blankFields": 25,
+        "repaired": 0,
+        "semanticReview": 0,
+        "pending": 0,
+        "recoveries": 1
+      },
+      "progress": {
+        "agentAddedCards": 13,
+        "agentWrittenFields": 79,
+        "step": 672,
+        "modelCalls": 32
+      },
+      "verificationCodes": {
+        "PLAN_DUPLICATE_REFERENCE": 15,
+        "PLAN_SEMANTIC_MISMATCH": 11,
+        "VERIFIED": 94,
+        "PICKER_NOT_COMMITTED": 4,
+        "PROTECTED": 1,
+        "LATER_READBACK_MISMATCH": 2,
+        "OPTION_UNAVAILABLE": 4,
+        "CONTROL_RETRY_LIMIT": 4,
+        "PLAN_MODEL_RESPONSE_INVALID": 1,
+        "NATIVE_EDIT_REJECTED": 1
+      }
+    },
+    {
+      "version": "0.7.20",
+      "site": "BOE",
+      "runId": "a692e640-88b6-4bfd-8438-c20f6e8d0086",
+      "scenario": "foreground_control_check",
+      "startedAt": "2026-10-06T11:21:05.382Z",
+      "endedAt": "2026-10-06T11:24:17.544Z",
+      "terminalCode": "PARTIAL_FILL_VERIFIED",
+      "finalResultReported": true,
+      "counts": {
+        "written": 76,
+        "unresolved": 1,
+        "skipped": 37,
+        "expected": 81,
+        "unplanned": 32,
+        "blankFields": 31,
+        "repaired": 0,
+        "semanticReview": 0,
+        "pending": 0,
+        "recoveries": 0
+      },
+      "progress": {
+        "agentAddedCards": 13,
+        "agentWrittenFields": 76,
+        "step": 645,
+        "modelCalls": 29
+      },
+      "verificationCodes": {
+        "PLAN_DUPLICATE_REFERENCE": 14,
+        "VERIFIED": 91,
+        "PROTECTED": 3,
+        "LATER_READBACK_MISMATCH": 2,
+        "OPTION_UNAVAILABLE": 1,
+        "PLAN_SEMANTIC_MISMATCH": 4,
+        "CONTROL_RETRY_LIMIT": 1,
+        "PLAN_MODEL_RESPONSE_INVALID": 2,
+        "SECTION_BOUNDARY_UNRESOLVED": 1,
+        "PLAN_UNKNOWN_REFERENCE": 1
+      }
+    },
+    {
+      "version": "0.7.21",
+      "site": "BOE",
+      "runId": "7fff4cd3-d73c-4ac6-9798-2bf238eb5530",
+      "scenario": "empty_form_false_completion",
+      "startedAt": "2026-10-06T11:31:20.438Z",
+      "endedAt": "2026-10-06T11:31:20.492Z",
+      "terminalCode": "NO_NEW_FIELDS_WRITTEN",
+      "finalResultReported": true,
+      "counts": {
+        "written": 0,
+        "unresolved": 0,
+        "skipped": 0,
+        "expected": 0,
+        "unplanned": 0,
+        "blankFields": 0,
+        "repaired": 0,
+        "semanticReview": 0,
+        "pending": 0,
+        "recoveries": 0
+      },
+      "progress": {
+        "agentAddedCards": 0,
+        "agentWrittenFields": 0,
+        "step": 8,
+        "modelCalls": 1
+      },
+      "verificationCodes": {}
+    },
+    {
+      "version": "0.7.22",
+      "site": "BOE",
+      "runId": "44baaac9-5ce2-4847-b8c3-809e16817ed2",
+      "scenario": "semantic_audit_found_three_wrong_fields",
+      "startedAt": "2026-10-06T11:36:19.313Z",
+      "endedAt": "2026-10-06T11:39:00.437Z",
+      "terminalCode": "PARTIAL_FILL_VERIFIED",
+      "finalResultReported": true,
+      "counts": {
+        "written": 78,
+        "unresolved": 0,
+        "skipped": 35,
+        "expected": 79,
+        "unplanned": 30,
+        "blankFields": 27,
+        "repaired": 0,
+        "semanticReview": 0,
+        "pending": 0,
+        "recoveries": 0
+      },
+      "progress": {
+        "agentAddedCards": 13,
+        "agentWrittenFields": 78,
+        "step": 510,
+        "modelCalls": 21
+      },
+      "verificationCodes": {
+        "VERIFIED": 91,
+        "PROTECTED": 1,
+        "PLAN_DUPLICATE_REFERENCE": 3,
+        "PLAN_MODEL_RESPONSE_INVALID": 1,
+        "PLAN_SEMANTIC_MISMATCH": 3,
+        "PLAN_UNKNOWN_REFERENCE": 2
+      },
+      "manualSemanticAudit": {
+        "wrongPhysicalFields": 3,
+        "domCountIsNotSemanticCorrectness": true
+      }
+    },
+    {
+      "version": "0.7.22",
+      "site": "Moka",
+      "runId": "a62a20f8-137b-4aab-b017-b6bc2c7ab892",
+      "scenario": "intermediate",
+      "startedAt": "2026-10-06T11:36:37.543Z",
+      "endedAt": "2026-10-06T11:38:41.598Z",
+      "terminalCode": "PARTIAL_FILL_VERIFIED",
+      "finalResultReported": true,
+      "counts": {
+        "written": 64,
+        "unresolved": 0,
+        "skipped": 39,
+        "expected": 67,
+        "unplanned": 31,
+        "blankFields": 31,
+        "repaired": 0,
+        "semanticReview": 0,
+        "pending": 0,
+        "recoveries": 1
+      },
+      "progress": {
+        "agentAddedCards": 12,
+        "agentWrittenFields": 64,
+        "step": 374,
+        "modelCalls": 15
+      },
+      "verificationCodes": {
+        "VERIFIED": 76,
+        "PROTECTED": 3,
+        "PLAN_SEMANTIC_MISMATCH": 1
+      }
+    },
+    {
+      "version": "0.7.23",
+      "site": "BOE",
+      "runId": "c47ea555-6051-4e98-a6d7-58839df45acd",
+      "scenario": "existing_content_receipts_unavailable",
+      "startedAt": "2026-10-06T11:54:05.700Z",
+      "endedAt": "2026-10-06T11:54:12.381Z",
+      "terminalCode": "NO_NEW_FIELDS_WRITTEN",
+      "finalResultReported": true,
+      "counts": {
+        "written": 0,
+        "unresolved": 0,
+        "skipped": 102,
+        "expected": 12,
+        "unplanned": 30,
+        "blankFields": 27,
+        "repaired": 0,
+        "semanticReview": 9,
+        "pending": 0,
+        "recoveries": 0
+      },
+      "progress": {
+        "agentAddedCards": 0,
+        "agentWrittenFields": 0,
+        "step": 53,
+        "modelCalls": 1
+      },
+      "verificationCodes": {
+        "PROTECTED": 12
+      },
+      "reviewMatches": {
+        "sourceCandidates": 9,
+        "physicalFields": 3,
+        "automaticallyCleared": 0
+      }
+    },
+    {
+      "version": "0.7.23",
+      "site": "BOE",
+      "runId": "3dd6dbed-05fd-4400-8ae1-35a975bb1a20",
+      "scenario": "intermediate",
+      "startedAt": "2026-10-06T11:58:42.748Z",
+      "endedAt": "2026-10-06T12:01:23.843Z",
+      "terminalCode": "PARTIAL_FILL_VERIFIED",
+      "finalResultReported": true,
+      "counts": {
+        "written": 75,
+        "unresolved": 1,
+        "skipped": 38,
+        "expected": 78,
+        "unplanned": 33,
+        "blankFields": 30,
+        "repaired": 0,
+        "semanticReview": 0,
+        "pending": 0,
+        "recoveries": 0
+      },
+      "progress": {
+        "agentAddedCards": 13,
+        "agentWrittenFields": 75,
+        "step": 505,
+        "modelCalls": 21
+      },
+      "verificationCodes": {
+        "VERIFIED": 90,
+        "OPTION_UNAVAILABLE": 1,
+        "PROTECTED": 1,
+        "LATER_READBACK_MISMATCH": 2,
+        "PLAN_DUPLICATE_REFERENCE": 2,
+        "PLAN_SEMANTIC_MISMATCH": 2,
+        "CONTROL_RETRY_LIMIT": 1,
+        "PLAN_MODEL_RESPONSE_INVALID": 3
+      }
+    },
+    {
+      "version": "0.7.23",
+      "site": "Moka",
+      "runId": "f280d774-bc23-4c1b-a724-c36659860b90",
+      "scenario": "intermediate",
+      "startedAt": "2026-10-06T11:59:02.905Z",
+      "endedAt": "2026-10-06T12:01:08.182Z",
+      "terminalCode": "PARTIAL_FILL_VERIFIED",
+      "finalResultReported": true,
+      "counts": {
+        "written": 64,
+        "unresolved": 1,
+        "skipped": 40,
+        "expected": 68,
+        "unplanned": 32,
+        "blankFields": 31,
+        "repaired": 0,
+        "semanticReview": 0,
+        "pending": 0,
+        "recoveries": 1
+      },
+      "progress": {
+        "agentAddedCards": 12,
+        "agentWrittenFields": 64,
+        "step": 375,
+        "modelCalls": 15
+      },
+      "verificationCodes": {
+        "VERIFIED": 77,
+        "PROTECTED": 3,
+        "WRITE_TARGET_RETIRED": 1,
+        "PLAN_SEMANTIC_MISMATCH": 1
+      }
+    },
+    {
+      "version": "0.7.24",
+      "site": "BOE",
+      "runId": "85281309-5d16-4cbf-a474-9c65a727f60c",
+      "scenario": "failed_before_write",
+      "startedAt": "2026-10-06T12:12:17.476Z",
+      "endedAt": "2026-10-06T12:12:18.204Z",
+      "terminalCode": "PLAN_MODEL_RESPONSE_INVALID",
+      "finalResultReported": false,
+      "counts": {},
+      "progress": {
+        "agentAddedCards": 0,
+        "agentWrittenFields": 0,
+        "step": 12,
+        "modelCalls": 3
+      },
+      "verificationCodes": {
+        "PLAN_MODEL_RESPONSE_INVALID": 4
+      }
+    },
+    {
+      "version": "0.7.24",
+      "site": "Moka",
+      "runId": "dd048378-cf49-417b-a3fa-ca79ca6b01df",
+      "scenario": "maintainer_stopped_without_final_audit",
+      "startedAt": "2026-10-06T12:12:33.611Z",
+      "endedAt": null,
+      "terminalCode": null,
+      "finalResultReported": false,
+      "verificationCodes": {
+        "PLAN_DUPLICATE_REFERENCE": 1,
+        "VERIFIED": 43,
+        "PROTECTED": 3
+      }
+    },
+    {
+      "version": "0.7.25",
+      "site": "BOE",
+      "runId": "79fb9b01-bc7c-4722-9c89-1e3d6e404d42",
+      "scenario": "intermediate",
+      "startedAt": "2026-10-06T12:20:34.500Z",
+      "endedAt": "2026-10-06T12:23:06.544Z",
+      "terminalCode": "PARTIAL_FILL_VERIFIED",
+      "finalResultReported": true,
+      "counts": {
+        "written": 75,
+        "unresolved": 1,
+        "skipped": 38,
+        "expected": 77,
+        "unplanned": 34,
+        "blankFields": 30,
+        "repaired": 0,
+        "semanticReview": 0,
+        "pending": 0,
+        "recoveries": 0
+      },
+      "progress": {
+        "agentAddedCards": 13,
+        "agentWrittenFields": 75,
+        "step": 458,
+        "modelCalls": 18
+      },
+      "verificationCodes": {
+        "VERIFIED": 88,
+        "PROTECTED": 1,
+        "OPTION_UNAVAILABLE": 1,
+        "PLAN_DUPLICATE_REFERENCE": 2,
+        "PLAN_SEMANTIC_MISMATCH": 1,
+        "PLAN_MODEL_RESPONSE_INVALID": 1
+      }
+    },
+    {
+      "version": "0.7.25",
+      "site": "Moka",
+      "runId": "315a42a0-c941-4266-b814-6b17e22dfe4a",
+      "scenario": "intermediate",
+      "startedAt": "2026-10-06T12:20:51.586Z",
+      "endedAt": "2026-10-06T12:22:54.008Z",
+      "terminalCode": "PARTIAL_FILL_VERIFIED",
+      "finalResultReported": true,
+      "counts": {
+        "written": 65,
+        "unresolved": 1,
+        "skipped": 38,
+        "expected": 69,
+        "unplanned": 32,
+        "blankFields": 31,
+        "repaired": 0,
+        "semanticReview": 0,
+        "pending": 0,
+        "recoveries": 1
+      },
+      "progress": {
+        "agentAddedCards": 12,
+        "agentWrittenFields": 65,
+        "step": 365,
+        "modelCalls": 14
+      },
+      "verificationCodes": {
+        "VERIFIED": 77,
+        "PROTECTED": 3,
+        "WRITE_RECEIPT_LOCKED": 1,
+        "OPTION_UNAVAILABLE": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>我的填写资料 · Resume Agent</title>
+  <link rel="stylesheet" href="profile-editor.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">RA</span><span>Resume Agent</span></div>
+    <div class="header-main">
+      <div><h1>我的填写资料</h1><p>在这里维护简历，保存后 Agent 会使用这份资料填写招聘网页。</p></div>
+      <div class="toolbar">
+        <button id="import-profile" class="secondary" type="button" disabled>导入备份</button>
+        <button id="export-profile" class="secondary" type="button" disabled>导出备份</button>
+        <button id="save-profile" type="button" disabled>保存资料</button>
+      </div>
+    </div>
+  </header>
+  <main class="workspace">
+    <aside class="sidebar">
+      <div class="sidebar-heading">资料分类</div>
+      <nav id="profile-nav" aria-label="资料分类"></nav>
+      <p class="sidebar-note">按实际情况填写，暂时没有的内容可以留空。</p>
+    </aside>
+    <div class="editor">
+      <div id="page-status" class="status" role="status" aria-live="polite">正在读取已保存的资料…</div>
+      <p id="saved-at" class="saved-at"></p>
+      <form id="profile-form" autocomplete="off">
+        <div id="profile-sections"></div>
+      </form>
+      <div class="section-navigation">
+        <button id="previous-section" type="button" class="secondary" disabled>上一项</button>
+        <button id="save-profile-bottom" type="button" disabled>保存全部资料</button>
+        <button id="next-section" type="button" class="secondary" disabled>下一项</button>
+      </div>
+      <p class="local-note">资料保存在当前 Chrome 的 Resume Agent 扩展中。填写和保存资料不需要模型服务。</p>
+    </div>
+  </main>
+  <input id="import-file" type="file" accept=".json,application/json" hidden>
+  <script src="dist/profile-editor.js"></script>
+</body>
+</html>

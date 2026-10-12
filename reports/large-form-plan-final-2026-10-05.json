@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-05T14:26:16.343Z",
+  "model": "deepseek-flash",
+  "scope": "Fictional 57-field, 3-group, 201-path model planning only; no real applicant values or browser actions",
+  "fieldCount": 57,
+  "groupCount": 3,
+  "factCount": 201,
+  "derivedFactCount": 33,
+  "protectedForm": false,
+  "result": {
+    "passed": false,
+    "code": "PLAN_SEMANTIC_MISMATCH",
+    "diagnostic": {
+      "violation": "incompatible_semantics",
+      "fieldIds": [
+        "field-56"
+      ],
+      "sourcePaths": [
+        "formAnswers.awardsAndCompetitionsSummary"
+      ]
+    }
+  },
+  "metrics": {
+    "requests": 1,
+    "inputTokens": 21686,
+    "outputTokens": 1359,
+    "totalLatencyMs": 4501,
+    "parallelCallsDiscarded": 0
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-04T07:18:50.627Z",
+  "model": "deepseek-flash",
+  "scope": "Three synthetic metadata cases, actual LLM mapping requests; no recruitment page or browser actions",
+  "passed": 3,
+  "total": 3,
+  "cases": [
+    {
+      "id": "education-alias-and-shortage",
+      "passed": true,
+      "additionalEntries": 1,
+      "routes": [
+        [
+          "educations"
+        ]
+      ],
+      "paths": [
+        "educations.0.school",
+        "educations.0.major"
+      ],
+      "fieldStatuses": [
+        "needs_control_adapter",
+        "mapped"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 1293,
+        "outputTokens": 182,
+        "totalLatencyMs": 1307,
+        "parallelCallsDiscarded": 0
+      }
+    },
+    {
+      "id": "awards-competitions-merged",
+      "passed": true,
+      "additionalEntries": 6,
+      "routes": [
+        [
+          "awards",
+          "competitions"
+        ]
+      ],
+      "paths": [
+        "awards.0.title"
+      ],
+      "fieldStatuses": [
+        "mapped"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 1335,
+        "outputTokens": 168,
+        "totalLatencyMs": 1187,
+        "parallelCallsDiscarded": 0
+      }
+    },
+    {
+      "id": "awards-competitions-separated",
+      "passed": true,
+      "additionalEntries": 5,
+      "routes": [
+        [
+          "awards"
+        ],
+        [
+          "competitions"
+        ]
+      ],
+      "paths": [
+        "awards.0.title",
+        "competitions.0.title"
+      ],
+      "fieldStatuses": [
+        "mapped",
+        "mapped"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 1407,
+        "outputTokens": 202,
+        "totalLatencyMs": 911,
+        "parallelCallsDiscarded": 0
+      }
+    }
+  ]
+}

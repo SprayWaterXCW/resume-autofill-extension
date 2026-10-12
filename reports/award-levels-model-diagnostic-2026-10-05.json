@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-05T10:25:11.445Z",
+  "model": "deepseek-flash",
+  "scope": "Synthetic award mapping requests only; model receives labels/paths, no profile values or browser actions",
+  "passed": 1,
+  "total": 3,
+  "cases": [
+    {
+      "id": "award-only-merged-levels",
+      "passed": false,
+      "paths": [
+        "awards.0.name",
+        "awards.0.scope",
+        "awards.0.rank",
+        null,
+        null,
+        null
+      ],
+      "routes": [
+        [
+          "awards",
+          "competitions"
+        ]
+      ],
+      "fieldStatuses": [
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter",
+        "missing_profile",
+        "missing_profile",
+        "missing_profile"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 2619,
+        "outputTokens": 256,
+        "totalLatencyMs": 1259,
+        "parallelCallsDiscarded": 0
+      }
+    },
+    {
+      "id": "separate-award-competition-levels",
+      "passed": true,
+      "paths": [
+        "awards.0.name",
+        "awards.0.scope",
+        "awards.0.rank",
+        "competitions.0.name",
+        "competitions.0.scope",
+        "competitions.0.rank"
+      ],
+      "routes": [
+        [
+          "awards"
+        ],
+        [
+          "competitions"
+        ]
+      ],
+      "fieldStatuses": [
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter",
+        "mapped",
+        "needs_control_adapter",
+        "needs_control_adapter"
+      ],
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 2643,
+        "outputTokens": 289,
+        "totalLatencyMs": 1571,
+        "parallelCallsDiscarded": 0
+      }
+    },
+    {
+      "id": "generic-dropdown-with-unconfirmed-scope",
+      "passed": false,
+      "code": "PLAN_SEMANTIC_MISMATCH",
+      "proposedPaths": [
+        "awards.0.name",
+        "awards.0.level",
+        "awards.0.level"
+      ],
+      "diagnostic": {
+        "violation": "incompatible_semantics",
+        "fieldIds": [
+          "field-2"
+        ],
+        "sourcePaths": [
+          "awards.0.level"
+        ]
+      },
+      "metrics": {
+        "requests": 1,
+        "inputTokens": 2066,
+        "outputTokens": 206,
+        "totalLatencyMs": 1126,
+        "parallelCallsDiscarded": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "origin": "https://app.mokahr.com",
+  "acceptance": "ordinary Chrome, existing profile/model/date policy, refresh then Start only; both tabs inactive during final runs",
+  "runs": [
+    {
+      "case": "0.7.17/A",
+      "runId": "ffa3898b-ec10-4503-8a66-ecc4680480aa",
+      "connectionId": "ff50847c-4440-4d94-9678-450444165fe8",
+      "startedAt": "2026-10-06T10:14:15.094Z",
+      "lastEventAt": "2026-10-06T10:22:47.737Z",
+      "lastTool": "fill_field",
+      "lastCode": null,
+      "progress": {
+        "agentAddedCards": 2,
+        "agentWrittenFields": 22,
+        "step": 165,
+        "modelCalls": 4
+      },
+      "finalCounts": null,
+      "optionNotCommittedCount": 12,
+      "executionErrors": [],
+      "finalReviewAdjustments": [],
+      "nonVerifiedAttempts": [
+        {
+          "fieldId": "field-8",
+          "sourcePath": "personal.highestEducationLevel",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-23",
+          "sourcePath": "educations.0.startDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-25",
+          "sourcePath": "educations.0.endDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-29",
+          "sourcePath": "educations.0.degree",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-30",
+          "sourcePath": "internships.0.startDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-32",
+          "sourcePath": "internships.0.endDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-38",
+          "sourcePath": "projects.0.startDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-40",
+          "sourcePath": "projects.0.endDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-48",
+          "sourcePath": "languages.0.proficiency",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-30",
+          "sourcePath": "educations.1.startDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-32",
+          "sourcePath": "educations.1.endDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-36",
+          "sourcePath": "educations.1.degree",
+          "code": "OPTION_NOT_COMMITTED"
+        }
+      ]
+    },
+    {
+      "case": "0.7.17/B",
+      "runId": "71d9c086-7e47-440a-bf10-b85fab97eb02",
+      "connectionId": "83c95602-dcee-498c-b12e-48fc0fc57052",
+      "startedAt": "2026-10-06T10:14:26.048Z",
+      "lastEventAt": "2026-10-06T10:21:29.506Z",
+      "lastTool": "fill_field",
+      "lastCode": null,
+      "progress": {
+        "agentAddedCards": 1,
+        "agentWrittenFields": 17,
+        "step": 134,
+        "modelCalls": 3
+      },
+      "finalCounts": null,
+      "optionNotCommittedCount": 12,
+      "executionErrors": [],
+      "finalReviewAdjustments": [],
+      "nonVerifiedAttempts": [
+        {
+          "fieldId": "field-8",
+          "sourcePath": "personal.highestEducationLevel",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-23",
+          "sourcePath": "educations.0.startDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-25",
+          "sourcePath": "educations.0.endDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-28",
+          "sourcePath": "educations.0.major",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-29",
+          "sourcePath": "educations.0.degree",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-30",
+          "sourcePath": "internships.0.startDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-32",
+          "sourcePath": "internships.0.endDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-38",
+          "sourcePath": "projects.0.startDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-40",
+          "sourcePath": "projects.0.endDateYear",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-48",
+          "sourcePath": "languages.0.proficiency",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-49",
+          "sourcePath": "languages.0.listeningSpeaking",
+          "code": "OPTION_NOT_COMMITTED"
+        },
+        {
+          "fieldId": "field-50",
+          "sourcePath": "languages.0.readingWriting",
+          "code": "OPTION_NOT_COMMITTED"
+        }
+      ]
+    },
+    {
+      "case": "0.7.18/A",
+      "runId": "642bac01-9a63-4727-8647-e63af6d038a6",
+      "connectionId": "054cd993-b691-4ffa-b149-2862307af6b1",
+      "startedAt": "2026-10-06T10:24:03.745Z",
+      "lastEventAt": "2026-10-06T10:25:58.992Z",
+      "lastTool": "result",
+      "lastCode": "PARTIAL_FILL_VERIFIED",
+      "progress": {
+        "agentAddedCards": 12,
+        "agentWrittenFields": 64,
+        "step": 365,
+        "modelCalls": 14
+      },
+      "finalCounts": {
+        "written": 64,
+        "unresolved": 2,
+        "skipped": 101,
+        "expected": 69,
+        "unplanned": 31,
+        "blankFields": 31,
+        "repaired": 0,
+        "semanticReview": 0,
+        "pending": 0,
+        "recoveries": 1
+      },
+      "optionNotCommittedCount": 0,
+      "executionErrors": [],
+      "finalReviewAdjustments": [
+        {
+          "fieldId": "field-8",
+          "sourcePath": "personal.highestEducationLevel",
+          "code": "WRITE_TARGET_RETIRED"
+        }
+      ],
+      "nonVerifiedAttempts": [
+        {
+          "fieldId": "field-7",
+          "sourcePath": "personal.highestEducationLevel",
+          "code": "OPTION_UNAVAILABLE"
+        }
+      ]
+    },
+    {
+      "case": "0.7.18/B",
+      "runId": "8528f291-703c-4cfa-8492-dc779f83cc71",
+      "connectionId": "d392b72d-b982-4490-8c6f-bf80c5939e9a",
+      "startedAt": "2026-10-06T10:24:25.842Z",
+      "lastEventAt": "2026-10-06T10:26:40.560Z",
+      "lastTool": "result",
+      "lastCode": "PARTIAL_FILL_VERIFIED",
+      "progress": {
+        "agentAddedCards": 12,
+        "agentWrittenFields": 64,
+        "step": 409,
+        "modelCalls": 15
+      },
+      "finalCounts": {
+        "written": 64,
+        "unresolved": 3,
+        "skipped": 102,
+        "expected": 75,
+        "unplanned": 32,
+        "blankFields": 31,
+        "repaired": 0,
+        "semanticReview": 0,
+        "pending": 0,
+        "recoveries": 1
+      },
+      "optionNotCommittedCount": 0,
+      "executionErrors": [],
+      "finalReviewAdjustments": [
+        {
+          "fieldId": "field-8",
+          "sourcePath": "personal.highestEducationLevel",
+          "code": "WRITE_TARGET_RETIRED"
+        }
+      ],
+      "nonVerifiedAttempts": [
+        {
+          "fieldId": "field-7",
+          "sourcePath": "formAnswers.internshipsLatestTitle",
+          "code": "OPTION_UNAVAILABLE"
+        },
+        {
+          "fieldId": "field-34",
+          "sourcePath": "educations.1.school",
+          "code": "OPTION_UNAVAILABLE"
+        },
+        {
+          "fieldId": "field-36",
+          "sourcePath": "educations.1.educationType",
+          "code": "OPTION_UNAVAILABLE"
+        },
+        {
+          "fieldId": "field-36",
+          "sourcePath": "educations.1.educationType",
+          "code": "OPTION_UNAVAILABLE"
+        },
+        {
+          "fieldId": "field-36",
+          "sourcePath": "educations.1.educationType",
+          "code": "OPTION_UNAVAILABLE"
+        },
+        {
+          "fieldId": "field-36",
+          "sourcePath": "educations.1.educationType",
+          "code": "OPTION_UNAVAILABLE"
+        },
+        {
+          "fieldId": "field-36",
+          "sourcePath": "educations.1.educationType",
+          "code": "OPTION_UNAVAILABLE"
+        }
+      ]
+    }
+  ]
+}

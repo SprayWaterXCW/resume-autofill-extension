@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Resume Agent · 当前标签页入口",
+  "version": "0.7.29",
+  "description": "通过网页表单维护简历资料，在普通 Chrome 当前招聘页进行语义映射、添加经历和填写核验；严禁自动提交。",
+  "minimum_chrome_version": "116",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAi9S8gr7spk0yxRZ+CZ+Q0CIJtsK0s/15fuoXhtCklZWFaTfWZeiuXKDdLOm6/WXKsP/CLt9g9Br3WgcxKMv3P2BzlToEQX14utZ5da3yT3a3S0tJPl5XW/B08U5TY6pZcX/HDI2w/pkQVn6CUeQBAMAHO7xzH+EDi4DCQSrXPjsr/4XkUFLiV1RjS1b1ZDuA4buoLwDcTWjGrU8mJRRmJrXp+nHyYdqixuBf6v3bteD9l/OsYReCoUxNCXp04EIGTvNRWjfIO9+npNzG7AeES6Ucq7Y59ZTSIiLrRlPz77R9AjqVYkfvT8uvCGIWrrAyIIaEx6LJz3y0nX9Vo/eXLwIDAQAB",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["http://127.0.0.1/*"],
+  "background": { "service_worker": "dist/worker.js", "type": "module" },
+  "options_ui": { "page": "profile-editor.html", "open_in_tab": true },
+  "action": {
+    "default_title": "Resume Agent：选择当前标签页",
+    "default_popup": "popup.html"
+  }
+}
