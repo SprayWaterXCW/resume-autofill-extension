@@ -13,7 +13,7 @@ A resume form assistant for the Chrome you already use.
 ![Node.js: 22+](docs/assets/badge-node.svg)
 ![verified on: macOS](docs/assets/badge-platform.svg)
 
-[Quick start](#quick-start) · [Everyday use](#using-it) · [FAQ](#faq) · [Autonomous agent](https://github.com/SprayWaterXCW/resume-agent-lab)
+[Quick start](#quick-start) · [Everyday use](#using-it) · [FAQ](#faq) · [Authors](#authors) · [Autonomous agent](https://github.com/SprayWaterXCW/resume-agent-lab)
 
 </div>
 
@@ -175,6 +175,18 @@ flowchart LR
 | Model-directed tool selection | [Resume Agent Lab](https://github.com/SprayWaterXCW/resume-agent-lab) |
 
 Documentation linked above is currently in Chinese. Run `npm test` for development checks. `npm run eval:benchmark` calls your configured model for synthetic evaluation and may incur charges. A Python Browser Use comparison remains in the research documents; everyday filling uses this project's Chrome extension.
+
+<a id="authors"></a>
+## ✍️ Authors & development partners
+
+**SprayWaterXCW × Codex**: it started with a simple question — why does filling a resume still involve so much copy and paste? We build, learn, and improve the experience through feedback from real forms.
+
+| Author | Contribution |
+| --- | --- |
+| **[SprayWaterXCW](https://github.com/SprayWaterXCW)** · Creator, author & maintainer | Product direction, requirements, real recruitment-site testing, feedback, and decisions about what comes next |
+| **Codex (OpenAI)** · AI co-author & development partner | Architecture, implementation, debugging, tests, and documentation to turn ideas into a working tool |
+
+More partners are welcome. [GitHub Contributors](https://github.com/SprayWaterXCW/resume-autofill-extension/graphs/contributors) is generated from account-linked commits; the table above also credits AI collaboration on this project.
 
 ## 🤝 Help make the next form easier
 

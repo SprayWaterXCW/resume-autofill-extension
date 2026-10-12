@@ -13,7 +13,7 @@
 ![Node.js: 22+](docs/assets/badge-node.svg)
 ![verified on: macOS](docs/assets/badge-platform.svg)
 
-[快速开始](#quick-start) · [日常使用](#using-it) · [常见问题](#faq) · [自主 Agent 项目](https://github.com/SprayWaterXCW/resume-agent-lab)
+[快速开始](#quick-start) · [日常使用](#using-it) · [常见问题](#faq) · [作者](#authors) · [自主 Agent 项目](https://github.com/SprayWaterXCW/resume-agent-lab)
 
 </div>
 
@@ -175,6 +175,18 @@ flowchart LR
 | 模型自主选择下一步的实验项目 | [Resume Agent Lab](https://github.com/SprayWaterXCW/resume-agent-lab) |
 
 开发检查：`npm test`。合成模型评测：`npm run eval:benchmark`，会调用你配置的模型并可能产生费用。Python Browser Use 对照实验保留在研究文档中，日常填写入口采用本项目的 Chrome 扩展。
+
+<a id="authors"></a>
+## ✍️ 作者与开发搭档
+
+**SprayWaterXCW × Codex**：从「为什么填简历还要反复复制粘贴？」这个想法出发，一边开发，一边在真实表单上发现问题、打磨体验。
+
+| 作者 | 在项目里做了什么 |
+| --- | --- |
+| **[SprayWaterXCW](https://github.com/SprayWaterXCW)** · 发起人、作者与维护者 | 提出产品方向和需求，测试真实招聘网站，提供反馈并决定项目的下一步 |
+| **Codex（OpenAI）** · AI 联合作者与开发搭档 | 参与架构设计、代码实现、问题排查、测试和文档，把想法变成可以运行的工具 |
+
+欢迎更多伙伴加入。[GitHub Contributors](https://github.com/SprayWaterXCW/resume-autofill-extension/graphs/contributors) 根据关联账号的提交自动统计；上表也记录了本项目的 AI 协作贡献。
 
 ## 🤝 一起把它做得更好
 
